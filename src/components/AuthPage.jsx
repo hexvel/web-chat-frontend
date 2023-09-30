@@ -5,7 +5,7 @@ const AuthPage = (props) => {
     e.preventDefault();
     const { value } = e.target[0];
     axios
-      .post("http://localhost:3000/auth", {
+      .post("https://web-chat-backend-i1xj.onrender.com/auth", {
         username: value,
       })
       .then((res) => props.onAuth({ ...res.data, secret: value }))
